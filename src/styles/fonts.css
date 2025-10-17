@@ -1,0 +1,26 @@
+/* Define font variables */
+:root {
+  --font-sans: var(--font-elegant);
+  --font-mono: var(--font-elegant);
+}
+
+/* Base fonts */
+body {
+  font-family: var(--font-sans), "TT Firs Neue", "Inter", system-ui, sans-serif;
+}
+
+/* Headings */
+:where(h1, h2, h3, h4, h5, h6, [class^="h-"]) {
+  font-family: var(--font-sans), "TT Firs Neue", "Inter", system-ui, sans-serif;
+}
+
+/* Technical text (used in pretitles) */
+.technical {
+  font-family: var(--font-mono), "TT Firs Neue", "Inter", monospace;
+}
+
+/* Code blocks */
+code,
+pre {
+  font-family: var(--font-mono), "TT Firs Neue", "Inter", monospace;
+}

@@ -1,0 +1,11 @@
+{
+  "name": "convex-functions",
+  "version": "1.0.0",
+  "description": "Convex backend functions with Stripe integration",
+  "type": "module",
+  "dependencies": {
+    "stripe": "^14.0.0"
+  }
+}
+
+

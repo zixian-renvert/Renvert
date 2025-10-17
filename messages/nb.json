@@ -1,0 +1,718 @@
+{
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, nb {🇳🇴 Norsk} en {🇺🇸 English} other {Unknown}}"
+  },
+  "NotFoundPage": {
+    "title": "Siden ble ikke funnet",
+    "description": "Siden du leter etter kunne ikke bli funnet."
+  },
+  "contact-form": {
+    "name": "Navn",
+    "email": "E-post",
+    "message": "Melding",
+    "company": "Bedrift",
+    "phone": "Telefon",
+    "your-phone": "Ditt telefonnummer",
+    "your-name": "Ditt fulle navn",
+    "your-company": "Din bedrift",
+    "your-message": "Din melding",
+    "your-email": "navn@bedrift.no",
+    "privacy-text": "Jeg godtar at dere kan kontakte meg via e-post. Les vår",
+    "privacy-link": "personvernerklæring",
+    "contact-information": "Kontaktinformasjon",
+    "open-24-7": "Døgnåpent",
+    "address": "Adresse",
+    "opening-hours": "Åpningstider",
+    "thank-you": "Takk for din henvendelse!",
+    "we-have-received-your-message": "Vi har mottatt din melding og vil kontakte deg så snart som mulig, vanligvis innen 1-2 virkedager.",
+    "check-your-email": "Sjekk innboksen din for en bekreftelsesmelding. Hvis du ikke finner den, sjekk søppelposten.",
+    "send-new-message": "Send ny henvendelse",
+    "newsletter": "Nyhetsbrev",
+    "send-message": "Send oss en melding"
+  },
+  "tracking": {
+    "Ie": "F.eks"
+  },
+  "CookieManager": {
+    "cookie-settings": "Cookie-innstillinger",
+    "name": "Navn",
+    "expires": "Utløper",
+    "purpose": "Formål",
+    "type": "Type",
+    "vendor": "Leverandør",
+    "necessary": "Nødvendig",
+    "analytics": "Analyse",
+    "marketing": "Markedsføring",
+    "functional": "Funksjonell"
+  },
+  "BlogList": {
+    "no-posts": "Fant ingen innlegg"
+  },
+  "onboarding": {
+    "title": "Velkommen til RenVert!",
+    "subtitle": "La oss få deg satt opp for å få mest mulig ut av plattformen vår.",
+    "progress": {
+      "step": "Steg {current} av {total}",
+      "complete": "Fullført"
+    },
+
+    "step1": {
+      "title": "Fortell oss om deg selv",
+      "description": "La oss starte med din grunnleggende informasjon"
+    },
+    "validation": {
+      "name-required": "Navn er påkrevd",
+      "phone-required": "Telefonnummer er påkrevd",
+      "phone-invalid": "Vennligst skriv inn et gyldig telefonnummer",
+      "landlord-type-required": "Vennligst velg om du er en privatperson eller et selskap",
+      "role-required": "Vennligst velg om du er utleier eller rengjøringsselskap",
+      "company-required": "Vennligst søk og velg et selskap fra Brønnøysund Register Centre",
+      "properties-required": "Vennligst legg til minst én eiendom",
+      "property-address-required": "Eiendomsadresse er påkrevd",
+      "property-size-required": "Størrelse (m²) er påkrevd",
+      "property-size-invalid": "Størrelse må være et positivt tall",
+      "property-size-out-of-range": "Størrelsen må være mellom {min} og {max} m²",
+      "cleaner-experience-required": "Beskriv din erfaring (minst 20 tegn)",
+      "hms-file-required": "HMS-kort opplasting er påkrevd for å fullføre registreringen",
+      "terms-required": "Du må akseptere vilkårene og betingelsene for å fortsette"
+    },
+    "step2": {
+      "title": "Velg din rolle",
+      "subtitle": "Er du en utleier eller en rengjøringstjeneste?",
+      "role-selection": {
+        "landlord": "Utleier",
+        "landlord-description": "Jeg eier eiendommer og trenger rengjøringstjenester",
+        "cleaner": "Renholder",
+        "cleaner-description": "Jeg tilbyr rengjøringstjenester til eiendommer"
+      },
+      "required-fields": "Påkrevde felter",
+      "name": "Fullt navn",
+      "name-placeholder": "Skriv inn ditt fullstendige navn",
+      "phone": "Telefonnummer",
+      "phone-placeholder": "Skriv inn ditt telefonnummer",
+      "phone-error": "Vennligst skriv inn et gyldig telefonnummer",
+      "phone-help": "Telefonnummeret vil bli validert for det valgte landet",
+      "email": "E-post",
+      "email-description": "E-post fylles automatisk fra din Google-konto",
+      "email-info-title": "E-post fra Google-konto",
+      "email-info-description": "Denne e-postadressen er automatisk levert av Google og kan ikke endres. Den brukes til kontoverifisering og kommunikasjon."
+    },
+    "step3": {
+      "landlord": {
+        "title": "Informasjon om selskap",
+        "subtitle": "Fortell oss om ditt selskap og dine eiendommer",
+        "private": {
+          "title": "Informasjon om eiendom",
+          "subtitle": "Fortell oss om dine eiendommer"
+        },
+        "type": {
+          "title": "Er du en privatperson eller et selskap?",
+          "private": "Privatperson",
+          "private-description": "Jeg eier eiendommer som privatperson",
+          "company": "Selskap",
+          "company-description": "Jeg representerer et selskap som eier eiendommer"
+        },
+        "company": {
+          "title": "Informasjon om selskap",
+          "search": "Søk",
+          "clear": "Tøm",
+          "no-results": "Ingen selskaper funnet",
+          "name": "Selskapsnavn *",
+          "org-number": "Organisasjonsnummer *",
+          "address": "Selskapsadresse *",
+          "type": "Selskapstype",
+          "registered": "Registreringsdato"
+        },
+        "properties": {
+          "title": "Dine eiendommer",
+          "subtitle": "Legg til eiendommene du vil liste for rengjøringstjenester",
+          "add-property": "Legg til en annen eiendom",
+          "property": "Eiendom",
+          "remove": "Fjern",
+          "type": "Eiendomstype",
+          "address": "Adresse",
+          "address-placeholder": "Søk etter adresse...",
+          "address-note": "Søk etter norske adresser ved hjelp av Kartverket",
+          "size": "Størrelse (m²)",
+          "size-placeholder": "100",
+          "unit-details": "Enhetsdetaljer",
+          "unit-details-placeholder": "f.eks., Leilighet 3B, 2. etasje, Bygg A",
+          "help-text": "Du kan legge til flere eiendommer. By og postnummer fylles automatisk fra adressesøket.",
+          "types": {
+            "apartment": "Leilighet",
+            "hytte": "Hytte",
+            "office": "Kontor",
+            "house": "Hus",
+            "commercial": "Næringsbygg",
+            "other": "Annet"
+          }
+        },
+        "terms": {
+          "title": "Vilkår og betingelser",
+          "text": "Jeg aksepterer",
+          "link": "vilkårene og betingelsene for utleiere",
+          "required": "Du må akseptere vilkårene og betingelsene for å fortsette"
+        }
+      },
+      "cleaner": {
+        "title": "Informasjon om rengjøringsfirma",
+        "subtitle": "Fortell oss om dine rengjøringstjenester",
+        "company": {
+          "title": "Informasjon om selskap",
+          "norwegian-companies-note": "For norske selskaper må du søke og velge ditt selskap fra Brønnøysundregistrene.",
+          "company-registration": "Selskapsregistrering",
+          "search-placeholder": "Søk etter ditt selskap...",
+          "no-results": "Fant ingen selskaper",
+          "help-start-typing": "Begynn å skrive selskapsnavn (3+ tegn) eller skriv 9-sifret organisasjonsnummer",
+          "help-searching-org": "Søker på organisasjonsnummer...",
+          "org-number-label": "Organisasjonsnummer",
+          "confirmation": {
+            "private": "Du har valgt å registrere deg som privatperson. Dine eiendomsdetaljer vil bli samlet inn i neste trinn.",
+            "company": "Selskap valgt: {companyName}. Dine eiendomsdetaljer vil bli samlet inn i neste trinn.",
+            "incomplete": "Vennligst fullfør valget ditt ovenfor for å fortsette."
+          }
+        },
+        "hms-card": {
+          "title": "Opplasting av HMS-kort",
+          "description": "Vennligst last opp ditt HMS-kort (Helse, Miljø og Sikkerhet)",
+          "upload": "HMS-kort *",
+          "drag-drop": "Klikk for å laste opp eller dra og slipp",
+          "required": "HMS-kort er påkrevd for alle rengjøringspersoner",
+          "more-info-text": "Les mer om HMS-kort og hvordan bestille på",
+          "more-info-link": "Arbeidstilsynet",
+          "example-title": "Eksempel på HMS-kort",
+          "example-alt": "Eksempel på utforming av HMS-kort"
+        },
+        "experience": "Erfaring",
+        "experience-placeholder": "Beskriv hvor du har jobbet, ansvar og antall år",
+        "experience-min-remaining": "{remaining} flere tegn kreves",
+        "terms": {
+          "title": "Vilkår og betingelser",
+          "text": "Jeg aksepterer",
+          "link": "vilkårene og betingelsene for renholdere",
+          "required": "Du må akseptere vilkårene og betingelsene for å fortsette"
+        },
+        "services": "Tilbudte tjenester",
+        "availability": "Tilgjengelighet",
+        "availability-placeholder": "f.eks. Hverdager, Helger, Fleksibelt",
+        "services-options": {
+          "residential": "Boligrengjøring",
+          "commercial": "Næringsrengjøring",
+          "deep-cleaning": "Dyp rengjøring",
+          "move-in-out": "Innflytting/Utflytting rengjøring",
+          "post-construction": "Etter byggereisning rengjøring",
+          "window-cleaning": "Vindusvask",
+          "carpet-cleaning": "Teppevask",
+          "eco-friendly": "Miljøvennlig rengjøring"
+        }
+      }
+    },
+    "navigation": {
+      "back": "Tilbake",
+      "next": "Neste",
+      "complete": "Fullfør onboarding"
+    },
+    "loading": "Behandler..."
+  },
+  "dashboard": {
+    "your_properties": "Dine eiendommer",
+    "back_to_overview": "Tilbake til oversikt",
+    "tabs": {
+      "overview": "Oversikt",
+      "bookings": "Bestillinger",
+      "jobs": "Jobber",
+      "payouts": "Utbetalinger",
+      "properties": "Eiendommer",
+      "settings": "Innstillinger"
+    },
+    "profile": {
+      "title": "Profil",
+      "name": "Navn:",
+      "email": "E‑post:",
+      "role": "Rolle:",
+      "roles": { "landlord": "Utleier", "cleaner": "Renholder" },
+      "status": "Status:",
+      "status_active": "Aktiv",
+      "not_provided": "Ikke oppgitt"
+    },
+    "summary": {
+      "properties_title": "Eiendommer",
+      "jobs_title": "Jobber",
+      "total_properties": "Totalt antall eiendommer",
+      "completed_jobs": "Fullførte jobber"
+    },
+    "quick": {
+      "title": "Hurtighandlinger",
+      "book_service": "Bestill rengjøring",
+      "view_jobs": "Se tilgjengelige jobber",
+      "manage_payouts": "Administrer utbetalinger"
+    },
+    "bookingForm": {
+      "title": "Bestill rengjøringstjeneste",
+      "description": "Planlegg en rengjøringstjeneste for en av eiendommene dine. Priser beregnes automatisk basert på eiendomsstørrelse og tjenestetype."
+    },
+    "payouts": {
+      "title": "Utbetalinger",
+      "card": {
+        "title": "Utbetalinger via Stripe Connect",
+        "desc": "Sett opp utbetalingsdetaljer for sikker utbetaling til bankkonto.",
+        "secure": "Stripe håndterer verifisering og utbetalinger. Dine data er sikre.",
+        "bank_on_file": "Registrert bankkonto",
+        "enabled": "Utbetalinger aktivert",
+        "no_bank": "Ingen bankkonto er tilkoblet enda.",
+        "continue": "Fortsett onboarding",
+        "manage": "Administrer konto",
+        "setup": "Registrer bankkonto",
+        "refresh": "Oppdater status",
+        "refreshSuccess": "Kontostatus oppdatert!",
+        "refreshError": "Kunne ikke oppdatere kontostatus. Prøv igjen."
+      }
+    },
+    "bookings": {
+      "title": "Rengjøringstjenester",
+      "activeBookings": "Aktive bestillinger",
+      "completedBookings": "Fullførte bestillinger",
+      "book_new": "Bestill ny tjeneste",
+      "existing": "Eksisterende bestillinger",
+      "contact": "Kontakt",
+      "contactCleaner": "Kontakt renholder",
+      "loadingContact": "Laster...",
+      "contactUnavailable": "Kontaktinformasjon ikke tilgjengelig",
+      "loading": "Laster bestillinger...",
+      "status": {
+        "pending": "Venter",
+        "requested": "Forespurt",
+        "confirmed": "Bekreftet",
+        "inProgress": "Pågår",
+        "in-progress": "Pågår",
+        "completed": "Fullført",
+        "cancelled": "Kansellert"
+      },
+      "paymentStatus": {
+        "pending": "Venter",
+        "authorized": "Autorisert",
+        "paid": "Betalt",
+        "refunded": "Refundert"
+      },
+      "noBookings": {
+        "title": "Ingen bestillinger ennå",
+        "description": "Du har ikke bestilt noen rengjøringstjenester ennå. Bestill din første tjeneste for å komme i gang!"
+      },
+      "actions": {
+        "edit": "Rediger bestilling",
+        "cancel": "Kanseller",
+        "cancelling": "Kansellerer...",
+        "bookAgain": "Bestill igjen",
+        "bookAgainHint": "Bruk bestillingsskjemaet ovenfor til venstre for å lage en ny bestilling"
+      },
+      "cancel": {
+        "confirm": "Er du sikker på at du vil kansellere denne bestillingen? Denne handlingen kan ikke angres.",
+        "error": "Kunne ikke kansellere bestillingen. Prøv igjen."
+      },
+      "edit": {
+        "title": "Rediger bestilling",
+        "description": "Oppdater bestillingsdetaljene dine. Du kan kun redigere bestillinger som ikke har blitt tildelt en renholder ennå.",
+        "save": "Lagre endringer",
+        "saving": "Lagrer...",
+        "cancel": "Avbryt"
+      },
+      "serviceType": {
+        "label": "Tjenestetype"
+      },
+      "dateTime": {
+        "label": "Dato og tid"
+      },
+      "specialInstructions": {
+        "label": "Spesielle instruksjoner",
+        "placeholder": "Eventuelle spesifikke krav eller notater for renholderen..."
+      },
+      "priceDisplay": {
+        "totalPrice": "Totalpris"
+      },
+      "propertyFallback": "Eiendom",
+      "labels": {
+        "date": "Dato:",
+        "time": "Tid:",
+        "service": "Tjeneste:",
+        "price": "Pris:",
+        "cleaner": "Renholder:",
+        "specialInstructions": "Spesielle instruksjoner:"
+      }
+    },
+    "jobs": {
+      "title": "Tilgjengelige rengjøringsjobber",
+      "services": {
+        "bnb": "BNB rengjøring",
+        "deep": "Standardvask",
+        "moveOut": "Flyttevask"
+      },
+      "status": {
+        "pending": "Venter",
+        "requested": "Forespurt",
+        "confirmed": "Bekreftet",
+        "inProgress": "Pågår",
+        "completed": "Fullført",
+        "cancelled": "Kansellert"
+      },
+      "paymentStatus": {
+        "pending": "Venter",
+        "authorized": "Autorisert",
+        "paid": "Betalt",
+        "refunded": "Refundert"
+      },
+      "list": {
+        "loading": "Laster tilgjengelige jobber...",
+        "heading": "Tilgjengelige rengjøringsjobber",
+        "filters": { "servicesAll": "Alle tjenester", "citiesAll": "Alle byer" },
+        "empty": {
+          "title": "Ingen jobber tilgjengelig",
+          "desc": "Det er ingen rengjøringsjobber tilgjengelig nå. Sjekk igjen senere!",
+          "descFiltered": "Ingen jobber matcher filtrene dine. Prøv å justere søket."
+        },
+        "propertyFallback": "Eiendom",
+        "date": { "notSet": "Dato ikke satt" },
+        "time": { "flexible": "Fleksibel" },
+        "landlord": { "private": "Privat" },
+        "specialInstructions": "Spesielle instruksjoner",
+        "cleanerEarning": "(din inntekt)",
+        "actions": {
+          "request": "Ta oppdraget",
+          "details": "Vis detaljer",
+          "requestSuccess": "Jobbforespørsel sendt! Utleier vil vurdere forespørselen din.",
+          "requestError": "Kunne ikke sende jobbforespørsel. Prøv igjen.",
+          "requestPending": "Forespørsel venter",
+          "requestDeclined": "Forespørsel avslått",
+          "requestAccepted": "Forespørsel godtatt"
+        }
+      }
+    },
+    "settings": {
+      "title": "Konto-innstillinger",
+      "account_info": "Kontoinformasjon",
+      "account_desc": "Administrer konto og preferanser",
+      "member_since": "Medlem siden",
+      "last_updated": "Sist oppdatert",
+      "loading": "Laster...",
+      "deletion_pending": "Denne kontoen er under sletting. Behandles innen 30 dager.",
+      "export": {
+        "title": "Eksporter data",
+        "desc": "Last ned en JSON-eksport av profilen og tilhørende data.",
+        "button": "Eksporter data"
+      },
+      "delete": {
+        "title": "Be om sletting av konto",
+        "desc": "Slett profilen og all tilknyttet data permanent.",
+        "button": "Slett konto"
+      }
+    },
+    "activeJobs": {
+      "title": "Aktive oppdrag",
+      "description": "Oppdrag du har akseptert og kan jobbe med",
+      "noActiveJobs": "Ingen aktive oppdrag. Sjekk Jobber-fanen for tilgjengelig arbeid.",
+      "startJob": "Start oppdrag",
+      "completeJob": "Fullfør oppdrag",
+      "scheduledFor": "Planlagt for",
+      "startSuccess": "Oppdrag startet! Betaling er sikret.",
+      "startSuccessCaptureError": "Oppdrag startet, men betalingsinnkreving feilet",
+      "startError": "Kunne ikke starte oppdrag. Prøv igjen.",
+      "completeSuccess": "Oppdrag fullført! Du vil motta betaling snart.",
+      "completeSuccessPayoutFailed": "Oppdrag fullført, men utbetaling feilet",
+      "completeSuccessPayoutPending": "Oppdrag fullført! Betalingen behandles av Stripe og vil bli overført til kontoen din automatisk innen 2-7 virkedager.",
+      "completeError": "Kunne ikke fullføre oppdrag. Prøv igjen.",
+      "openInMaps": "Åpne i Google Maps",
+      "paymentLabel": "Betaling",
+      "payoutLabel": "Utbetaling",
+      "paymentStatusLabels": {
+        "pending": "Venter",
+        "authorized": "Autorisert",
+        "paid": "Betalt",
+        "refunded": "Refundert",
+        "failed": "Mislyktes"
+      },
+      "payoutStatusLabels": {
+        "pending": "Venter",
+        "paid": "Betalt",
+        "failed": "Mislyktes"
+      }
+    },
+    "jobStart": {
+      "title": "Start oppdrag",
+      "description": "Gå gjennom detaljene og bekreft at du er klar til å starte",
+      "instructions": "Spesielle instruksjoner",
+      "confirm": {
+        "title": "Før du starter:",
+        "arrived": "Jeg har ankommet eiendommen",
+        "readInstructions": "Jeg har lest alle spesielle instruksjoner",
+        "readyToStart": "Jeg er klar til å begynne rengjøringen"
+      },
+      "cancel": "Avbryt",
+      "confirmStart": "Start oppdrag",
+      "starting": "Starter..."
+    },
+    "jobComplete": {
+      "title": "Fullfør oppdrag",
+      "description": "Bekreft at alt arbeid er fullført",
+      "instructionsReview": "Spesielle instruksjoner (gjennomgang)",
+      "checklist": {
+        "title": "Fullføringsliste",
+        "allTasks": "Alle rengjøringsoppgaver er fullført",
+        "instructions": "Alle spesielle instruksjoner er fulgt",
+        "clean": "Området er rent og klart for bruk"
+      },
+      "support": {
+        "title": "Spørsmål eller problemer?",
+        "description": "Kontakt vårt supportteam på"
+      },
+      "cancel": "Avbryt",
+      "confirmComplete": "Fullfør oppdrag",
+      "completing": "Fullfører..."
+    },
+    "cleanerSelection": {
+      "title": "Velg din renholder",
+      "description": "{count} renholdere har bedt om denne jobben",
+      "noRequests": "Ingen renholdere har bedt om denne jobben ennå. Sjekk igjen senere.",
+      "anonymous": "Anonym renholder",
+      "completedJobs": "fullførte jobber",
+      "rating": "gjennomsnittlig vurdering",
+      "newCleaner": "Ny renholder",
+      "message": "Melding",
+      "selectCleaner": "Velg denne renholderen",
+      "selecting": "Velger...",
+      "selectSuccess": "Renholder valgt! De vil bli varslet og kan starte jobben på den planlagte datoen.",
+      "selectError": "Kunne ikke velge renholder. Prøv igjen.",
+      "orgNumber": "Org.nr.",
+      "individual": "Enkeltperson",
+      "companyNotLoaded": "Bedriftsinformasjon ikke tilgjengelig"
+    },
+    "jobDetails": {
+      "description": "Detaljert informasjon om denne rengjøringsjobben",
+      "close": "Lukk",
+      "property": {
+        "title": "Eiendomsdetaljer",
+        "address": "Adresse",
+        "size": "Størrelse",
+        "type": "Type",
+        "notSpecified": "Ikke spesifisert"
+      },
+      "job": {
+        "title": "Jobbdetaljer",
+        "service": "Tjenestetype",
+        "date": "Planlagt dato",
+        "time": "Planlagt tid",
+        "status": "Status"
+      },
+      "payment": {
+        "title": "Betalingsfordeling",
+        "totalPrice": "Total pris",
+        "yourEarning": "Din inntekt"
+      },
+      "landlord": {
+        "title": "Utleierinformasjon",
+        "type": "Type"
+      }
+    },
+    "payoutSummary": {
+      "title": "Inntekter og utbetalinger",
+      "description": "Følg med på inntekter og utbetalinger",
+      "loading": "Laster inntektsdata...",
+      "pendingTitle": "Venter på utbetaling",
+      "upcomingTitle": "Kommende inntekter",
+      "totalEarned": "Totalt tjent",
+      "completedJobs": "fullførte jobber",
+      "inProgressJobs": "jobber pågår",
+      "totalCompletedJobs": "totalt fullførte jobber",
+      "paidJobs": "betalte jobber",
+      "pendingJobs": "venter på utbetaling",
+      "nextPayout": "Neste utbetaling",
+      "estimatedDate": "Estimert dato",
+      "processing": "Behandles",
+      "pendingExplanation": "Stripe behandler betalingen. Penger vil bli overført automatisk innen 2-7 virkedager."
+    },
+    "menu": {
+      "dashboardLabel": "Oversikt",
+      "dashboardDesc": "Se din hovedoversikt",
+      "messagesLabel": "Meldinger",
+      "messagesDesc": "Se meldingene dine",
+      "soonBadge": "Snart",
+      "accountLabel": "Konto-innstillinger",
+      "accountDesc": "Administrer kontoen din",
+      "signOutLabel": "Logg ut",
+      "signOutDesc": "Logg ut av kontoen din"
+    },
+    "form": {
+      "propertyLabel": "Velg eiendom",
+      "serviceLabel": "Tjenestetype",
+      "dateLabel": "Dato",
+      "timeLabel": "Tidsperiode",
+      "instructionsLabel": "Spesielle instruksjoner (valgfritt)",
+      "instructionsPlaceholder": "Eventuelle spesifikke krav eller tilgangsinstruksjoner...",
+      "continuePayment": "Fortsett til betaling",
+      "calculating": "Beregner pris...",
+      "fillRequired": "Vennligst fyll ut alle obligatoriske felt"
+    }
+  },
+  "booking": {
+    "paymentInfo": {
+      "title": "Hvordan betaling fungerer",
+      "description": "Betalingen din er sikker og beskyttet gjennom hele rengjøringsprosessen.",
+      "step1": {
+        "title": "Betalingsautorisasjon",
+        "description": "Når du bestiller, autoriserer vi betalingsmetoden din, men belaster deg ikke ennå. Pengene dine holdes trygt."
+      },
+      "step2": {
+        "title": "Betalingsbelastning",
+        "description": "Betaling belastes kun når renholderen kommer og starter jobben med fotobekreftelse."
+      },
+      "step3": {
+        "title": "Tjenestefullforing",
+        "description": "Renholderen får betalt først etter å ha fullført jobben og lastet opp et 'etter'-bilde for din godkjennelse."
+      },
+      "guarantee": {
+        "title": "100% beskyttet",
+        "description": "Du betaler kun hvis renholderen møter opp og fullfører arbeidet."
+      }
+    },
+    "serviceTypes": {
+      "selected": "Valgt",
+      "bnb": {
+        "title": "BNB rengjøring",
+        "description": "Effektiv rengjøring mellom gjesteopphold. Perfekt for airbnb og booking. Rask klargjøring for din neste gjest."
+      },
+      "deep": {
+        "title": "Standardvask",
+        "description": "Grundig, men lettvint rengjøring når du ikke har tid. Gir hjemmet en oppfriskning og velstelt i hverdagen."
+      },
+      "moveOut": {
+        "title": "Flyttevask",
+        "description": "Grundig og detaljert rengjøring ved utflytting. Gir boligen et skinnende rent preg ved overtakelse"
+      }
+    },
+    "timeRanges": {
+      "morning": "Morgen",
+      "afternoon": "Ettermiddag",
+      "evening": "Kveld",
+      "flexible": "Fleksibel",
+      "flexibleDesc": "Når som helst som passer"
+    },
+    "dateTime": {
+      "date": "Dato",
+      "timeRange": "Tidsperiode",
+      "selectDate": "Velg en dato"
+    },
+    "form": {
+      "propertyLabel": "Velg eiendom",
+      "serviceLabel": "Tjenestetype",
+      "dateLabel": "Dato",
+      "timeLabel": "Tidsperiode",
+      "instructionsLabel": "Spesielle instruksjoner (valgfritt)",
+      "instructionsPlaceholder": "Eventuelle spesifikke krav eller tilgangsinstruksjoner...",
+      "continuePayment": "Fortsett til betaling",
+      "calculating": "Beregner pris...",
+      "fillRequired": "Vennligst fyll ut alle påkrevde felter"
+    },
+    "priceDisplay": {
+      "totalPrice": "Total pris",
+      "howPaymentWorks": "Hvordan fungerer betalingen"
+    },
+    "payment": {
+      "title": "Betalingsdetaljer",
+      "subtitle": "Sikker betaling drevet av Stripe",
+      "totalAmount": "Totalbeløp",
+      "scheduledDates": "Planlagte datoer:",
+      "date": "dato",
+      "dates": "datoer",
+      "savePaymentMethod": "Lagre betalingsmetode for fremtidige bestillinger",
+      "cancel": "Avbryt",
+      "pay": "Betal {amount} NOK",
+      "processing": "Behandler...",
+      "securityNotice": "Betalingsinformasjonen din er kryptert og sikker",
+      "paymentSuccessful": "Betaling vellykket!",
+      "serviceBooked": "Rengjøringstjenesten din er bestilt.",
+      "initializingPayment": "Initialiserer betaling...",
+      "tryAgain": "Prøv igjen",
+      "errors": {
+        "systemNotReady": "Betalingssystemet er ikke klart. Vennligst prøv igjen.",
+        "paymentFailed": "Betaling mislyktes. Vennligst prøv igjen.",
+        "paymentNotCompleted": "Betalingen ble ikke fullført. Vennligst prøv igjen.",
+        "unexpectedError": "En uventet feil oppstod. Vennligst prøv igjen.",
+        "initializationFailed": "Kunne ikke initialisere betaling. Vennligst prøv igjen."
+      }
+    }
+  },
+  "properties": {
+    "loading": "Laster eiendommer...",
+    "noProperties": {
+      "title": "Ingen eiendommer ennå",
+      "description": "Du har ikke lagt til noen eiendommer ennå. Legg til din første eiendom for å komme i gang med rengjøringstjenester."
+    },
+    "types": {
+      "apartment": "Leilighet",
+      "hytte": "Hytte",
+      "office": "Kontor",
+      "house": "Hus",
+      "commercial": "Næringsbygg",
+      "other": "Annet"
+    },
+    "status": {
+      "active": "Aktiv",
+      "inactive": "Inaktiv"
+    },
+    "added": "Lagt til",
+    "size": "Størrelse",
+    "editButton": "Rediger",
+    "edit": {
+      "title": "Rediger eiendom: {name}",
+      "description": "Oppdater informasjonen om din eiendom",
+      "successMessage": "Eiendommen ble oppdatert!",
+      "errorMessage": "Kunne ikke oppdatere eiendom: {error}",
+      "form": {
+        "name": {
+          "label": "Eiendomsnavn",
+          "placeholder": "f.eks. Sentrumsleilighet, Strandhus"
+        },
+        "type": {
+          "label": "Eiendomstype",
+          "placeholder": "Velg eiendomstype",
+          "options": {
+            "apartment": "Leilighet",
+            "hytte": "Hytte",
+            "office": "Kontor",
+            "house": "Hus",
+            "commercial": "Næringsbygg",
+            "other": "Annet"
+          }
+        },
+        "address": {
+          "label": "Adresse",
+          "placeholder": "Gateadresse"
+        },
+        "postalCode": {
+          "label": "Postnummer",
+          "placeholder": "0000"
+        },
+        "city": {
+          "label": "By",
+          "placeholder": "Bynavn"
+        },
+        "size": {
+          "label": "Størrelse (m²)",
+          "placeholder": "f.eks. 75",
+          "helpText": "Dette hjelper med å beregne nøyaktig prising for rengjøringstjenester"
+        },
+        "unitDetails": {
+          "label": "Enhetsdetaljer",
+          "placeholder": "Leilighetsnummer, etasje, bygg, etc."
+        },
+        "isActive": {
+          "label": "Eiendommen er aktiv og tilgjengelig for rengjøringstjenester"
+        },
+        "submit": {
+          "update": "Oppdater eiendom",
+          "updating": "Oppdaterer..."
+        },
+        "cancel": "Avbryt"
+      }
+    }
+  }
+}

@@ -1,0 +1,166 @@
+FROM node:lts AS base
+
+# Disable Next.js telemetry for production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+# Set up dependencies and build tools
+FROM base AS builder
+ARG PNPM_VERSION=10.10.0
+WORKDIR /app
+# Enable corepack to manage pnpm
+RUN corepack enable
+# Activate specific pnpm version
+RUN corepack prepare pnpm@${PNPM_VERSION} --activate
+
+# Install turbo explicitly for caching support
+COPY package.json .
+COPY pnpm-lock.yaml .
+COPY pnpm-workspace.yaml .
+RUN pnpm install --filter turbo
+# Explicitly copy only what is needed for build
+COPY . .
+# Prune dependencies to reduce image size, enable turbo cache
+RUN pnpm dlx turbo prune @medalsocial/renvert --docker
+
+# Install isolated subworkspace dependencies
+FROM base AS installer
+ARG PNPM_VERSION=10.10.0
+ARG NEXT_PUBLIC_BASE_URL
+ARG NEXT_PUBLIC_SANITY_PROJECT_ID
+ARG NEXT_PUBLIC_SANITY_DATASET
+ARG NEXT_PUBLIC_UMAMI_WEBSITE_ID
+ARG SANITY_API_READ_TOKEN
+ARG NODE_ENV=production
+ARG MEDAL_API_ENDPOINT
+ARG MEDAL_SOCIAL_CLIENT_ID
+ARG MEDAL_SOCIAL_CLIENT_SECRET
+ARG NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+ARG CLERK_SECRET_KEY
+ARG CLERK_JWT_ISSUER_DOMAIN
+ARG CONVEX_DEPLOYMENT
+ARG CONVEX_SITE_URL
+ARG NEXT_PUBLIC_CONVEX_URL
+ARG GOOGLE_PLACES_API_KEY
+ARG STRIPE_SECRET_KEY
+ARG NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+ARG GOOGLE_CHAT_WEBHOOK_URL
+
+# Set environment variables for the build
+ENV NEXT_PUBLIC_BASE_URL=$NEXT_PUBLIC_BASE_URL
+ENV NEXT_PUBLIC_SANITY_PROJECT_ID=$NEXT_PUBLIC_SANITY_PROJECT_ID
+ENV NEXT_PUBLIC_SANITY_DATASET=$NEXT_PUBLIC_SANITY_DATASET
+ENV NEXT_PUBLIC_UMAMI_WEBSITE_ID=$NEXT_PUBLIC_UMAMI_WEBSITE_ID
+ENV SANITY_API_READ_TOKEN=$SANITY_API_READ_TOKEN
+ENV NODE_ENV=$NODE_ENV
+ENV MEDAL_API_ENDPOINT=$MEDAL_API_ENDPOINT
+ENV MEDAL_SOCIAL_CLIENT_ID=$MEDAL_SOCIAL_CLIENT_ID
+ENV MEDAL_SOCIAL_CLIENT_SECRET=$MEDAL_SOCIAL_CLIENT_SECRET
+ENV NODE_OPTIONS="--max-old-space-size=4096"
+ENV NEXT_DISABLE_SOURCEMAPS=1
+ENV NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=$NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+ENV CLERK_SECRET_KEY=$CLERK_SECRET_KEY
+ENV CLERK_JWT_ISSUER_DOMAIN=$CLERK_JWT_ISSUER_DOMAIN
+ENV CONVEX_DEPLOYMENT=$CONVEX_DEPLOYMENT
+ENV CONVEX_SITE_URL=$CONVEX_SITE_URL
+ENV NEXT_PUBLIC_CONVEX_URL=$NEXT_PUBLIC_CONVEX_URL
+ENV GOOGLE_PLACES_API_KEY=$GOOGLE_PLACES_API_KEY
+ENV STRIPE_SECRET_KEY=$STRIPE_SECRET_KEY
+ENV NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=$NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+ENV GOOGLE_CHAT_WEBHOOK_URL=$GOOGLE_CHAT_WEBHOOK_URL
+
+WORKDIR /app
+
+RUN corepack enable
+RUN corepack prepare pnpm@${PNPM_VERSION} --activate
+
+# Explicitly copy the files necessary for install
+COPY --from=builder /app/out/json/ .
+COPY --from=builder /app/out/pnpm-lock.yaml ./
+COPY --from=builder /app/out/pnpm-workspace.yaml ./
+
+# Install dependencies with --no-strict-peer-dependencies
+RUN pnpm install --frozen-lockfile --no-strict-peer-dependencies
+
+# Copy and build the project explicitly
+COPY --from=builder /app/out/full/ .
+
+# Write environment variables to .env file for Next.js build
+RUN echo "SANITY_API_READ_TOKEN=$SANITY_API_READ_TOKEN\nNEXT_PUBLIC_BASE_URL=$NEXT_PUBLIC_BASE_URL\nNEXT_PUBLIC_SANITY_PROJECT_ID=$NEXT_PUBLIC_SANITY_PROJECT_ID\nNEXT_PUBLIC_SANITY_DATASET=$NEXT_PUBLIC_SANITY_DATASET\nNEXT_PUBLIC_UMAMI_WEBSITE_ID=$NEXT_PUBLIC_UMAMI_WEBSITE_ID\nNEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=$NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY\nCLERK_SECRET_KEY=$CLERK_SECRET_KEY\nCLERK_JWT_ISSUER_DOMAIN=$CLERK_JWT_ISSUER_DOMAIN\nCONVEX_DEPLOYMENT=$CONVEX_DEPLOYMENT\nCONVEX_SITE_URL=$CONVEX_SITE_URL\nNEXT_PUBLIC_CONVEX_URL=$NEXT_PUBLIC_CONVEX_URL\nGOOGLE_PLACES_API_KEY=$GOOGLE_PLACES_API_KEY\nSTRIPE_SECRET_KEY=$STRIPE_SECRET_KEY\nNEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=$NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY\nGOOGLE_CHAT_WEBHOOK_URL=$GOOGLE_CHAT_WEBHOOK_URL" > /app/apps/renvert/.env
+
+# Build the project with environment variables from .env
+RUN pnpm dlx turbo run build --filter=@medalsocial/renvert... -- --no-lint
+
+# Copy static files to standalone directory as per Next.js docs
+RUN cp -r /app/apps/renvert/public /app/apps/renvert/.next/standalone/apps/renvert/ && \
+    cp -r /app/apps/renvert/.next/static /app/apps/renvert/.next/standalone/apps/renvert/.next/
+
+# Configure the production runner
+FROM base AS runner
+ARG NEXT_PUBLIC_BASE_URL
+ARG NEXT_PUBLIC_SANITY_PROJECT_ID
+ARG NEXT_PUBLIC_SANITY_DATASET
+ARG NEXT_PUBLIC_UMAMI_WEBSITE_ID
+ARG SANITY_API_READ_TOKEN
+ARG NODE_ENV=production
+ARG MEDAL_API_ENDPOINT
+ARG MEDAL_SOCIAL_CLIENT_ID
+ARG MEDAL_SOCIAL_CLIENT_SECRET
+ARG NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+ARG CLERK_SECRET_KEY
+ARG CLERK_JWT_ISSUER_DOMAIN
+ARG CONVEX_DEPLOYMENT
+ARG CONVEX_SITE_URL
+ARG NEXT_PUBLIC_CONVEX_URL
+ARG GOOGLE_PLACES_API_KEY
+ARG STRIPE_SECRET_KEY
+ARG NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+ARG GOOGLE_CHAT_WEBHOOK_URL
+
+WORKDIR /app
+
+# Configure non-root user first
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser --system --uid 1001 nextjs
+
+# Copy standalone build and dependencies
+COPY --from=installer /app/apps/renvert/.next/standalone/ ./
+COPY --from=installer /app/apps/renvert/.next/static/ ./apps/renvert/.next/static/
+COPY --from=installer /app/apps/renvert/public/ ./apps/renvert/public/
+
+# Set runtime environment variables
+ENV NEXT_PUBLIC_BASE_URL=$NEXT_PUBLIC_BASE_URL
+ENV NEXT_PUBLIC_SANITY_PROJECT_ID=$NEXT_PUBLIC_SANITY_PROJECT_ID
+ENV NEXT_PUBLIC_SANITY_DATASET=$NEXT_PUBLIC_SANITY_DATASET
+ENV NEXT_PUBLIC_UMAMI_WEBSITE_ID=$NEXT_PUBLIC_UMAMI_WEBSITE_ID
+ENV SANITY_API_READ_TOKEN=$SANITY_API_READ_TOKEN
+ENV NODE_ENV=$NODE_ENV
+ENV MEDAL_API_ENDPOINT=$MEDAL_API_ENDPOINT
+ENV MEDAL_SOCIAL_CLIENT_ID=$MEDAL_SOCIAL_CLIENT_ID
+ENV MEDAL_SOCIAL_CLIENT_SECRET=$MEDAL_SOCIAL_CLIENT_SECRET
+ENV NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=$NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+ENV CLERK_SECRET_KEY=$CLERK_SECRET_KEY
+ENV CLERK_JWT_ISSUER_DOMAIN=$CLERK_JWT_ISSUER_DOMAIN
+ENV CONVEX_DEPLOYMENT=$CONVEX_DEPLOYMENT
+ENV CONVEX_SITE_URL=$CONVEX_SITE_URL
+ENV NEXT_PUBLIC_CONVEX_URL=$NEXT_PUBLIC_CONVEX_URL
+ENV GOOGLE_PLACES_API_KEY=$GOOGLE_PLACES_API_KEY
+ENV STRIPE_SECRET_KEY=$STRIPE_SECRET_KEY
+ENV NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=$NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+ENV GOOGLE_CHAT_WEBHOOK_URL=$GOOGLE_CHAT_WEBHOOK_URL
+
+# Set correct permissions after copying all files
+RUN chown -R nextjs:nodejs /app
+
+# Switch to non-root user
+USER nextjs
+
+# Expose port with health check configuration
+EXPOSE 3000
+
+# Add health check for zero-downtime deployments
+# This ensures the orchestrator knows when the container is ready
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+  CMD wget --no-verbose --tries=1 --spider http://localhost:3000/api/health || exit 1
+
+# Start the application
+CMD ["node", "apps/renvert/server.js"]

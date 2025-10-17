@@ -1,0 +1,718 @@
+{
+  "LocaleSwitcher": {
+    "label": "Language",
+    "locale": "{locale, select, nb {🇳🇴 Norsk} en {🇺🇸 English} other {Unknown}}"
+  },
+  "NotFoundPage": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for could not be found."
+  },
+  "onboarding": {
+    "title": "Welcome to RenVert",
+    "subtitle": "Let's get you set up and ready to go",
+    "progress": {
+      "step": "Step {current} of {total}",
+      "complete": "Complete"
+    },
+
+    "step1": {
+      "title": "Tell us about yourself",
+      "description": "Let's start with your basic information"
+    },
+    "validation": {
+      "name-required": "Name is required",
+      "phone-required": "Phone number is required",
+      "phone-invalid": "Please enter a valid phone number",
+      "landlord-type-required": "Please select whether you are a private person or company",
+      "role-required": "Please select whether you are a landlord or cleaner",
+      "company-required": "Please search and select a company from Brønnøysund Register Centre",
+      "properties-required": "Please add at least one property",
+      "property-address-required": "Property address is required",
+      "property-size-required": "Property size (m²) is required",
+      "property-size-invalid": "Property size must be a positive number",
+      "property-size-out-of-range": "Property size must be between {min} and {max} m²",
+      "cleaner-experience-required": "Please describe your experience (at least 20 characters)",
+      "hms-file-required": "HMS card upload is required to complete registration",
+      "terms-required": "You must accept the terms and conditions to continue"
+    },
+    "step2": {
+      "title": "Choose Your Role",
+      "subtitle": "Are you a landlord or a cleaning service provider?",
+      "role-selection": {
+        "landlord": "Landlord",
+        "landlord-description": "I own properties and need cleaning services",
+        "cleaner": "Cleaning Company",
+        "cleaner-description": "I provide cleaning services to properties"
+      },
+      "required-fields": "Required fields",
+      "name": "Full Name",
+      "name-placeholder": "Enter your full name",
+      "phone": "Phone Number",
+      "phone-placeholder": "Enter your phone number",
+      "phone-error": "Please enter a valid phone number",
+      "phone-help": "Phone number will be validated for the selected country",
+      "email": "Email",
+      "email-description": "Email is automatically filled from your Google account",
+      "email-info-title": "Email from Google Account",
+      "email-info-description": "This email address is automatically provided by Google and cannot be changed. It's used for account verification and communication."
+    },
+    "step3": {
+      "landlord": {
+        "title": "Company Information",
+        "subtitle": "Tell us about your company and properties",
+        "private": {
+          "title": "Property Information",
+          "subtitle": "Tell us about your properties"
+        },
+        "type": {
+          "title": "Are you a private person or a company?",
+          "private": "Private Person",
+          "private-description": "I own properties as an individual",
+          "company": "Company",
+          "company-description": "I represent a company that owns properties"
+        },
+        "company": {
+          "title": "Company Information",
+          "search": "Search",
+          "clear": "Clear",
+          "no-results": "No companies found",
+          "name": "Company Name *",
+          "org-number": "Organization Number *",
+          "address": "Company Address *",
+          "type": "Company Type",
+          "registered": "Registration Date"
+        },
+        "properties": {
+          "title": "Your Properties",
+          "subtitle": "Add the properties you want to list for cleaning services",
+          "add-property": "Add Another Property",
+          "property": "Property",
+          "remove": "Remove",
+          "type": "Property Type",
+          "address": "Address",
+          "address-placeholder": "Search for address...",
+          "address-note": "Search for Norwegian addresses using Kartverket",
+          "size": "Size (m²)",
+          "size-placeholder": "100",
+          "unit-details": "Unit Details",
+          "unit-details-placeholder": "e.g., Apartment 3B, Floor 2, Building A",
+          "help-text": "You can add multiple properties. City and postal code are automatically filled from the address search.",
+          "types": {
+            "apartment": "Apartment",
+            "hytte": "Cabin",
+            "office": "Office",
+            "house": "House",
+            "commercial": "Commercial",
+            "other": "Other"
+          }
+        },
+        "terms": {
+          "title": "Terms and Conditions",
+          "text": "I accept the",
+          "link": "terms and conditions for landlords",
+          "required": "You must accept the terms and conditions to continue"
+        }
+      },
+      "cleaner": {
+        "title": "Cleaning Company Information",
+        "subtitle": "Tell us about your cleaning services",
+        "company": {
+          "title": "Company Information",
+          "norwegian-companies-note": "For Norwegian companies, you must search and select your company from Brønnøysundregistrene.",
+          "company-registration": "Company Registration",
+          "search-placeholder": "Search for your company...",
+          "no-results": "No companies found",
+          "help-start-typing": "Start typing company name (3+ characters) or enter 9-digit organization number",
+          "help-searching-org": "Searching by organization number...",
+          "org-number-label": "Organization Number",
+          "confirmation": {
+            "private": "You've selected to register as a private person. Your property details will be collected in the next step.",
+            "company": "Company selected: {companyName}. Your property details will be collected in the next step.",
+            "incomplete": "Please complete your selection above to continue."
+          }
+        },
+        "hms-card": {
+          "title": "HMS Card Upload",
+          "description": "Please upload your HMS (Health, Safety and Environment) card",
+          "upload": "HMS Card *",
+          "drag-drop": "Click to upload or drag and drop",
+          "required": "HMS card is required for all cleaning service providers",
+          "more-info-text": "Read more about HMS cards and how to order them at",
+          "more-info-link": "Arbeidstilsynet",
+          "example-title": "Example HMS card",
+          "example-alt": "Example of an HMS card layout"
+        },
+        "experience": "Experience",
+        "experience-placeholder": "Describe where you've worked, responsibilities, and years",
+        "experience-min-remaining": "{remaining} more characters required",
+        "terms": {
+          "title": "Terms and Conditions",
+          "text": "I accept the",
+          "link": "terms and conditions for cleaners",
+          "required": "You must accept the terms and conditions to continue"
+        },
+        "services": "Services Offered",
+        "availability": "Availability",
+        "availability-placeholder": "e.g., Weekdays, Weekends, Flexible",
+        "services-options": {
+          "residential": "Residential Cleaning",
+          "commercial": "Commercial Cleaning",
+          "deep-cleaning": "Deep Cleaning",
+          "move-in-out": "Move-in/Out Cleaning",
+          "post-construction": "Post-Construction Cleaning",
+          "window-cleaning": "Window Cleaning",
+          "carpet-cleaning": "Carpet Cleaning",
+          "eco-friendly": "Eco-Friendly Cleaning"
+        }
+      }
+    },
+    "navigation": {
+      "back": "Back",
+      "next": "Next",
+      "complete": "Complete Onboarding"
+    },
+    "loading": "Processing..."
+  },
+  "contact-form": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "company": "Company",
+    "phone": "Phone",
+    "your-phone": "Your phone",
+    "your-name": "Your full name",
+    "your-company": "Your company",
+    "your-message": "Your message",
+    "your-email": "name@company.com",
+    "privacy-text": "I accept that you can contact me via email. Read our",
+    "privacy-link": "privacy policy",
+    "contact-information": "Contact information",
+    "open-24-7": "Open 24/7",
+    "address": "Address",
+    "opening-hours": "Opening hours",
+    "thank-you": "Thank you for your message",
+    "we-have-received-your-message": "We have received your message and will contact you as soon as possible, usually within 1-2 working days.",
+    "check-your-email": "Check your email for a confirmation message. If you don't find it, check your spam folder.",
+    "send-new-message": "Send new message",
+    "newsletter": "Newsletter",
+    "send-message": "Send us a message"
+  },
+  "tracking": {
+    "Ie": "I.e"
+  },
+  "CookieManager": {
+    "cookie-settings": "Cookie settings",
+    "name": "Name",
+    "expires": "Expires",
+    "purpose": "Purpose",
+    "type": "Type",
+    "vendor": "Vendor",
+    "necessary": "Necessary",
+    "analytics": "Analytics",
+    "marketing": "Marketing",
+    "functional": "Functional"
+  },
+  "BlogList": {
+    "no-posts": "No posts found"
+  },
+  "dashboard": {
+    "your_properties": "Your Properties",
+    "back_to_overview": "Back to Overview",
+    "tabs": {
+      "overview": "Overview",
+      "bookings": "Bookings",
+      "jobs": "Jobs",
+      "payouts": "Payouts",
+      "properties": "Properties",
+      "settings": "Settings"
+    },
+    "profile": {
+      "title": "Profile",
+      "name": "Name:",
+      "email": "Email:",
+      "role": "Role:",
+      "roles": { "landlord": "Landlord", "cleaner": "Cleaner" },
+      "status": "Status:",
+      "status_active": "Active",
+      "not_provided": "Not provided"
+    },
+    "summary": {
+      "properties_title": "Properties",
+      "jobs_title": "Jobs",
+      "total_properties": "Total Properties",
+      "completed_jobs": "Completed Jobs"
+    },
+    "quick": {
+      "title": "Quick Actions",
+      "book_service": "Book Cleaning Service",
+      "view_jobs": "View Available Jobs",
+      "manage_payouts": "Manage Payouts"
+    },
+    "bookingForm": {
+      "title": "Book Cleaning Service",
+      "description": "Schedule a cleaning service for one of your properties. Prices are automatically calculated based on property size and service type."
+    },
+    "payouts": {
+      "title": "Payouts",
+      "card": {
+        "title": "Payouts via Stripe Connect",
+        "desc": "Set up your payout details to get paid securely to your bank account.",
+        "secure": "Stripe handles verification and payouts. Your data is secure.",
+        "bank_on_file": "Bank account on file",
+        "enabled": "Payouts enabled",
+        "no_bank": "No bank account connected yet.",
+        "continue": "Continue onboarding",
+        "manage": "Manage Account",
+        "setup": "Set up payouts",
+        "refresh": "Refresh Status",
+        "refreshSuccess": "Account status updated successfully!",
+        "refreshError": "Failed to refresh account status. Please try again."
+      }
+    },
+    "bookings": {
+      "title": "Cleaning Services",
+      "activeBookings": "Active Bookings",
+      "completedBookings": "Completed Bookings",
+      "book_new": "Book New Service",
+      "existing": "Existing Bookings",
+      "contact": "Contact",
+      "contactCleaner": "Contact Cleaner",
+      "loadingContact": "Loading...",
+      "contactUnavailable": "Contact information not available",
+      "loading": "Loading bookings...",
+      "status": {
+        "pending": "Pending",
+        "requested": "Requested",
+        "confirmed": "Confirmed",
+        "inProgress": "In progress",
+        "in-progress": "In progress",
+        "completed": "Completed",
+        "cancelled": "Cancelled"
+      },
+      "paymentStatus": {
+        "pending": "Pending",
+        "authorized": "Authorized",
+        "paid": "Paid",
+        "refunded": "Refunded"
+      },
+      "noBookings": {
+        "title": "No Bookings Yet",
+        "description": "You haven't booked any cleaning services yet. Book your first service to get started!"
+      },
+      "actions": {
+        "edit": "Edit Booking",
+        "cancel": "Cancel",
+        "cancelling": "Cancelling...",
+        "bookAgain": "Book Again",
+        "bookAgainHint": "Use the booking form at the top left to create a new booking"
+      },
+      "cancel": {
+        "confirm": "Are you sure you want to cancel this booking? This action cannot be undone.",
+        "error": "Failed to cancel booking. Please try again."
+      },
+      "edit": {
+        "title": "Edit Booking",
+        "description": "Update your booking details. You can only edit bookings that haven't been assigned to a cleaner yet.",
+        "save": "Save Changes",
+        "saving": "Saving...",
+        "cancel": "Cancel"
+      },
+      "serviceType": {
+        "label": "Service Type"
+      },
+      "dateTime": {
+        "label": "Date & Time"
+      },
+      "specialInstructions": {
+        "label": "Special Instructions",
+        "placeholder": "Any specific requirements or notes for the cleaner..."
+      },
+      "priceDisplay": {
+        "totalPrice": "Total Price"
+      },
+      "propertyFallback": "Property",
+      "labels": {
+        "date": "Date:",
+        "time": "Time:",
+        "service": "Service:",
+        "price": "Price:",
+        "cleaner": "Cleaner:",
+        "specialInstructions": "Special Instructions:"
+      }
+    },
+    "jobs": {
+      "title": "Available Cleaning Jobs",
+      "services": {
+        "bnb": "BNB Cleaning",
+        "deep": "Deep Cleaning",
+        "moveOut": "Move-out Cleaning"
+      },
+      "status": {
+        "pending": "Pending",
+        "requested": "Requested",
+        "confirmed": "Confirmed",
+        "inProgress": "In progress",
+        "completed": "Completed",
+        "cancelled": "Cancelled"
+      },
+      "paymentStatus": {
+        "pending": "Pending",
+        "authorized": "Authorized",
+        "paid": "Paid",
+        "refunded": "Refunded"
+      },
+      "list": {
+        "loading": "Loading available jobs...",
+        "heading": "Available Cleaning Jobs",
+        "filters": { "servicesAll": "All Services", "citiesAll": "All Cities" },
+        "empty": {
+          "title": "No Jobs Available",
+          "desc": "There are currently no cleaning jobs available. Check back later!",
+          "descFiltered": "No jobs match your current filters. Try adjusting your search criteria."
+        },
+        "propertyFallback": "Property",
+        "date": { "notSet": "Date not set" },
+        "time": { "flexible": "Flexible" },
+        "landlord": { "private": "Private" },
+        "specialInstructions": "Special Instructions",
+        "cleanerEarning": "(your earning)",
+        "actions": {
+          "request": "Request Job",
+          "details": "View Details",
+          "requestSuccess": "Job request submitted! The landlord will review your request.",
+          "requestError": "Failed to submit job request. Please try again.",
+          "requestPending": "Request Pending",
+          "requestDeclined": "Request Declined",
+          "requestAccepted": "Request Accepted"
+        }
+      }
+    },
+    "settings": {
+      "title": "Account Settings",
+      "account_info": "Account Information",
+      "account_desc": "Manage your account settings and preferences",
+      "member_since": "Member Since",
+      "last_updated": "Last Updated",
+      "loading": "Loading...",
+      "deletion_pending": "This account is pending deletion. It will be processed within 30 days.",
+      "export": {
+        "title": "Export your data",
+        "desc": "Download a JSON export of your profile and related data.",
+        "button": "Export Data"
+      },
+      "delete": {
+        "title": "Request account deletion",
+        "desc": "Permanently delete your profile and associated data.",
+        "button": "Delete Account"
+      }
+    },
+    "form": {
+      "propertyLabel": "Select Property",
+      "serviceLabel": "Service Type",
+      "dateLabel": "Date",
+      "timeLabel": "Time Range",
+      "instructionsLabel": "Special Instructions (Optional)",
+      "instructionsPlaceholder": "Any specific requirements or access instructions...",
+      "continuePayment": "Continue to Payment",
+      "calculating": "Calculating Price...",
+      "fillRequired": "Please fill in all required fields"
+    }
+  },
+  "booking": {
+    "paymentInfo": {
+      "title": "How Payment Works",
+      "description": "Your payment is secure and protected throughout the cleaning process.",
+      "step1": {
+        "title": "Payment Authorization",
+        "description": "When you book, we authorize your payment method but don't charge you yet. Your money is safely held."
+      },
+      "step2": {
+        "title": "Payment Capture",
+        "description": "Payment is only charged when the cleaner arrives and starts the job with a photo confirmation."
+      },
+      "step3": {
+        "title": "Service Completion",
+        "description": "The cleaner gets paid only after completing the job and uploading an 'after' photo for your approval."
+      },
+      "guarantee": {
+        "title": "100% Protected",
+        "description": "You only pay if the cleaner shows up and completes the work."
+      }
+    },
+    "serviceTypes": {
+      "selected": "Selected",
+      "bnb": {
+        "title": "BNB Cleaning",
+        "description": "Quick turnaround for guest changeovers"
+      },
+      "deep": {
+        "title": "Deep Cleaning",
+        "description": "Thorough cleaning for move-ins or seasonal refresh"
+      },
+      "moveOut": {
+        "title": "Move-out Cleaning",
+        "description": "Complete cleaning for deposit return"
+      }
+    },
+    "timeRanges": {
+      "morning": "Morning",
+      "afternoon": "Afternoon",
+      "evening": "Evening",
+      "flexible": "Flexible",
+      "flexibleDesc": "Any time that works"
+    },
+    "dateTime": {
+      "date": "Date",
+      "timeRange": "Time Range",
+      "selectDate": "Select a date"
+    },
+    "form": {
+      "propertyLabel": "Select Property",
+      "serviceLabel": "Service Type",
+      "dateLabel": "Date",
+      "timeLabel": "Time Range",
+      "instructionsLabel": "Special Instructions (Optional)",
+      "instructionsPlaceholder": "Any specific requirements or access instructions...",
+      "continuePayment": "Continue to Payment",
+      "calculating": "Calculating Price...",
+      "fillRequired": "Please fill in all required fields"
+    },
+    "priceDisplay": {
+      "totalPrice": "Total Price",
+      "howPaymentWorks": "How payment works"
+    },
+    "payment": {
+      "title": "Payment Details",
+      "subtitle": "Secure payment powered by Stripe",
+      "totalAmount": "Total Amount",
+      "scheduledDates": "Scheduled Dates:",
+      "date": "date",
+      "dates": "dates",
+      "savePaymentMethod": "Save payment method for future bookings",
+      "cancel": "Cancel",
+      "pay": "Pay {amount} NOK",
+      "processing": "Processing...",
+      "securityNotice": "Your payment information is encrypted and secure",
+      "paymentSuccessful": "Payment Successful!",
+      "serviceBooked": "Your cleaning service has been booked.",
+      "initializingPayment": "Initializing payment...",
+      "tryAgain": "Try Again",
+      "errors": {
+        "systemNotReady": "Payment system not ready. Please try again.",
+        "paymentFailed": "Payment failed. Please try again.",
+        "paymentNotCompleted": "Payment was not completed. Please try again.",
+        "unexpectedError": "An unexpected error occurred. Please try again.",
+        "initializationFailed": "Failed to initialize payment. Please try again."
+      }
+    }
+  },
+  "properties": {
+    "loading": "Loading properties...",
+    "noProperties": {
+      "title": "No properties yet",
+      "description": "You haven't added any properties yet. Add your first property to get started with cleaning services."
+    },
+    "types": {
+      "apartment": "Apartment",
+      "hytte": "Cabin",
+      "office": "Office",
+      "house": "House",
+      "commercial": "Commercial",
+      "other": "Other"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "added": "Added",
+    "size": "Size",
+    "editButton": "Edit",
+    "edit": {
+      "title": "Edit property: {name}",
+      "description": "Update your property information",
+      "successMessage": "Property updated successfully!",
+      "errorMessage": "Could not update property: {error}",
+      "form": {
+        "name": {
+          "label": "Property Name",
+          "placeholder": "e.g., Downtown Apartment, Beach House"
+        },
+        "type": {
+          "label": "Property Type",
+          "placeholder": "Select property type",
+          "options": {
+            "apartment": "Apartment",
+            "hytte": "Cabin",
+            "office": "Office",
+            "house": "House",
+            "commercial": "Commercial",
+            "other": "Other"
+          }
+        },
+        "address": {
+          "label": "Address",
+          "placeholder": "Street address"
+        },
+        "postalCode": {
+          "label": "Postal Code",
+          "placeholder": "0000"
+        },
+        "city": {
+          "label": "City",
+          "placeholder": "City name"
+        },
+        "size": {
+          "label": "Size (m²)",
+          "placeholder": "e.g., 75",
+          "helpText": "This helps calculate accurate pricing for cleaning services"
+        },
+        "unitDetails": {
+          "label": "Unit Details",
+          "placeholder": "Apartment number, floor, building, etc."
+        },
+        "isActive": {
+          "label": "Property is active and available for cleaning services"
+        },
+        "submit": {
+          "update": "Update property",
+          "updating": "Updating..."
+        },
+        "cancel": "Cancel"
+      }
+    },
+    "activeJobs": {
+      "title": "Active Jobs",
+      "description": "Jobs you've accepted and can work on",
+      "noActiveJobs": "No active jobs. Check the Jobs tab to find available work.",
+      "startJob": "Start Job",
+      "completeJob": "Complete Job",
+      "scheduledFor": "Scheduled for",
+      "startSuccess": "Job started! Payment has been captured.",
+      "startSuccessCaptureError": "Job started but payment capture failed",
+      "startError": "Failed to start job. Please try again.",
+      "completeSuccess": "Job completed! You will receive payment shortly.",
+      "completeSuccessPayoutFailed": "Job completed but payout failed",
+      "completeSuccessPayoutPending": "Job completed! Payment is being processed by Stripe and will be transferred to your account automatically within 2-7 business days.",
+      "completeError": "Failed to complete job. Please try again.",
+      "openInMaps": "Open in Google Maps",
+      "paymentLabel": "Payment",
+      "payoutLabel": "Payout",
+      "paymentStatusLabels": {
+        "pending": "Pending",
+        "authorized": "Authorized",
+        "paid": "Paid",
+        "refunded": "Refunded",
+        "failed": "Failed"
+      },
+      "payoutStatusLabels": {
+        "pending": "Pending",
+        "paid": "Paid",
+        "failed": "Failed"
+      }
+    },
+    "jobStart": {
+      "title": "Start Job",
+      "description": "Review the details and confirm you're ready to start",
+      "instructions": "Special Instructions",
+      "confirm": {
+        "title": "Before you start:",
+        "arrived": "I have arrived at the property",
+        "readInstructions": "I have read all special instructions",
+        "readyToStart": "I am ready to begin the cleaning"
+      },
+      "cancel": "Cancel",
+      "confirmStart": "Start Job",
+      "starting": "Starting..."
+    },
+    "jobComplete": {
+      "title": "Complete Job",
+      "description": "Confirm that all work has been completed",
+      "instructionsReview": "Special Instructions (Review)",
+      "checklist": {
+        "title": "Completion Checklist",
+        "allTasks": "All cleaning tasks have been completed",
+        "instructions": "All special instructions have been followed",
+        "clean": "The area is clean and ready for use"
+      },
+      "support": {
+        "title": "Questions or Issues?",
+        "description": "Contact our support team at"
+      },
+      "cancel": "Cancel",
+      "confirmComplete": "Complete Job",
+      "completing": "Completing..."
+    },
+    "cleanerSelection": {
+      "title": "Choose Your Cleaner",
+      "description": "{count} cleaners have requested this job",
+      "noRequests": "No cleaners have requested this job yet. Check back later.",
+      "anonymous": "Anonymous Cleaner",
+      "completedJobs": "completed jobs",
+      "rating": "average rating",
+      "newCleaner": "New Cleaner",
+      "message": "Message",
+      "selectCleaner": "Select This Cleaner",
+      "selecting": "Selecting...",
+      "selectSuccess": "Cleaner selected! They will be notified and can start the job on the scheduled date.",
+      "selectError": "Failed to select cleaner. Please try again.",
+      "orgNumber": "Org. Number",
+      "individual": "Individual",
+      "companyNotLoaded": "Company information not available"
+    },
+    "jobDetails": {
+      "description": "Detailed information about this cleaning job",
+      "close": "Close",
+      "property": {
+        "title": "Property Details",
+        "address": "Address",
+        "size": "Size",
+        "type": "Type",
+        "notSpecified": "Not specified"
+      },
+      "job": {
+        "title": "Job Details",
+        "service": "Service Type",
+        "date": "Scheduled Date",
+        "time": "Scheduled Time",
+        "status": "Status"
+      },
+      "payment": {
+        "title": "Payment Breakdown",
+        "totalPrice": "Total Price",
+        "yourEarning": "Your Earning"
+      },
+      "landlord": {
+        "title": "Landlord Information",
+        "type": "Type"
+      }
+    },
+      "payoutSummary": {
+      "title": "Earnings & Payouts",
+      "description": "Track your earnings and payouts",
+      "loading": "Loading earnings data...",
+      "pendingTitle": "Pending Payout",
+      "upcomingTitle": "Upcoming Earnings",
+      "totalEarned": "Total Earned",
+      "completedJobs": "completed jobs",
+      "inProgressJobs": "jobs in progress",
+      "totalCompletedJobs": "total completed jobs",
+      "paidJobs": "paid jobs",
+      "pendingJobs": "pending payout",
+      "nextPayout": "Next payout",
+      "estimatedDate": "Estimated date",
+      "processing": "Processing",
+      "pendingExplanation": "Stripe is processing the payment. Funds will be transferred automatically within 2-7 business days."
+    },
+    "menu": {
+      "dashboardLabel": "Dashboard",
+      "dashboardDesc": "View your main dashboard",
+      "messagesLabel": "Messages",
+      "messagesDesc": "View your messages",
+      "soonBadge": "Soon",
+      "accountLabel": "Account Settings",
+      "accountDesc": "Manage your account",
+      "signOutLabel": "Sign out",
+      "signOutDesc": "Sign out of your account"
+    }
+  }
+}
